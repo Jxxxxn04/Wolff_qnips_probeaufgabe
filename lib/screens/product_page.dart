@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qnips_probeaufgabe/models/product.dart';
+import 'package:qnips_probeaufgabe/models/old_product.dart';
 import 'package:qnips_probeaufgabe/widgets/product_page_widget.dart';
 
 class ProductPage extends StatelessWidget {
@@ -9,7 +9,7 @@ class ProductPage extends StatelessWidget {
       required this.productsMap,
       required this.initalDayIndex});
 
-  final Map<int, Product> productsMap;
+  final Map<int, OldProduct> productsMap;
   final List<dynamic> products;
   final int initalDayIndex;
 
@@ -43,6 +43,10 @@ class ProductPage extends StatelessWidget {
         return "Donnerstag";
       case 4:
         return "Freitag";
+      case 5:
+        return "Samstag";
+      case 6:
+        return "Sonntag";
       default:
         return "WrongIndex";
     }
